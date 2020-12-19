@@ -1,0 +1,78 @@
+body {margin: 0; padding: 0;}
+
+.background {width: 1920px; height: 1080px; background-color: #5AC2E5; position: relative; }
+.cube {
+    position: relative;
+
+    transform-style: preserve-3d;
+}
+.cube > div {
+    
+    position: absolute;
+    text-align: center;
+    line-height: 200px;
+
+}
+.cube > .left {width: 294px; }
+.cube > .right {width: 294px; }
+.front {
+
+    transform: translate3d(0px,-264px,147px);
+    width: 1026px;
+    height: 559px; 
+    background-image: url(../img/box-man.png);
+}
+.back {
+    transform: rotateY(180deg) translate3d(0px,-280px,147px);
+    width: 1026px; 
+    height: 574px;
+    background-image: url(../img/box-door.png);
+}
+.left {
+    transform: rotateY(-90deg) translateZ(147px);
+    width: 294px;
+    height: 294px;
+    background-image: url(../img/five.png);
+}
+.right {
+    transform: rotateY(90deg) translate3d(0px,-186px,879px);
+    width: 294px;
+    height: 480.335px;
+    background-image: url(../img/key-five.png);
+}
+.top {
+    transform: rotateX(-90deg) translateZ(147px);
+    width: 1026px; 
+    height: 294px;
+    background-image: url(../img/top.png);
+}
+.btm {
+    transform: rotateX(90deg) translateZ(147px);
+    width: 1026px; 
+    height: 294px;
+    background-image: url(../img/top.png);
+}
+
+.cube {
+    width: 1026px;
+    height: 294px;}
+
+.frontcity {
+  animation: mymove 7s infinite;
+}
+
+.backcity {
+	animation: yourmove 7s infinite;
+}
+
+@keyframes mymove {
+	0% {left: -30px;}
+	50% {left: 0px;}
+	100% {left: -30px; }
+}
+
+@keyframes yourmove {
+	0% {left: -10px;}
+	50% {left: 0px;}
+	100% {left: -10px;}
+}
